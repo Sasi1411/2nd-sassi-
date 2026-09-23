@@ -22,8 +22,9 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const defaultLanguage = LANGUAGES_LIST.find((l) => l.code === 'en') || LANGUAGES_LIST[0];
   const currentLanguage = 
-    LANGUAGES_LIST.find((l) => l.code === currentCode) || LANGUAGES_LIST[8]; // Default English
+    LANGUAGES_LIST.find((l) => l.code === currentCode) || defaultLanguage;
 
   const setLanguageByCode = (code: string) => {
     setCurrentCode(code);
