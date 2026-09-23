@@ -10,6 +10,8 @@
     "start": "node server.js",
     "preview": "vite preview",
     "clean": "rm -rf dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
@@ -35,5 +37,6 @@
     "vite": "^8.3.0"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
